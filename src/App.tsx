@@ -1,20 +1,17 @@
 import { useState } from "react";
+import ExpandableTxt from "./Components/ExpandableTxt/ExpandableTxt";
 
 const App = () => {
-  const [game, setGame] = useState({
-    id: 1,
-    player: {
-      name: "John",
-    },
-  });
-
-  const handleClick = () => {
-    setGame({ ...game, player: { ...game.player, name: "Steven" } });
-  };
   return (
     <div>
-      <h2>{game.player.name}</h2>
-      <button onClick={handleClick}> CHANGE NAME</button>
+      <ExpandableTxt maxChars={50}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
+        ratione. Aut a, excepturi temporibus odit deleniti iste officia labore
+        repellat non dolore hic eius! Earum consequatur ipsam laudantium nemo
+        vero, voluptates explicabo atque quasi ducimus, sapiente consequuntur
+        voluptas? Ipsum suscipit sed alias libero provident consequatur fugiat
+        mollitia esse debitis minus.
+      </ExpandableTxt>
     </div>
   );
 };
